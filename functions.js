@@ -1,5 +1,3 @@
-let haveMoney = false;
-
 // Arrow Functions
 // ------------------------------------------------------------
 // Function Declaration
@@ -22,6 +20,22 @@ const ask = function () {
   // why am i poor again?
 };
 
+// Template literals
+// --------------------------------------------------------------
+
+// String literal
+const introduceYourself = (name, position, tool) => {
+  return "Hi! My name is " + name + ",\n I am a " + position + ",\n i like using " + tool;
+};
+
+// Template literal
+const introduceYourself2 = (name, position, tool) => {
+  return `
+    Hi! My name is ${name}.
+    I am a ${position}.
+    i like using ${tool}.`;
+};
+
 // Truthy and Falsy Values
 // --------------------------------------------------------------
 // In JavaScript, the following values are considered falsy:
@@ -38,25 +52,31 @@ const ask = function () {
 // All other values in JavaScript are considered truthy,
 // including empty objects `{}`, empty arrays `[]`, and all other non-zero numbers.
 
+// falsy values you actually encounter
 const falsyValues = [false, 0, "", null, undefined, NaN];
 
 // Ternary Operators
 // ------------------------------------------------------------
 
 // Logical (Ternary) Pperators
+let haveMoney = false;
+
 const car = haveMoney && "BMW";
 const transport = car || "walking";
 const walkingHome = !transport;
 
-// if Shorthand
-if (haveMoney) spendMoney();
-
-// Conditional (Ternary) Operator
+// regular if expression
 if (haveMoney) {
   spendMoney();
 } else {
   winLottery();
 }
+
+// if Shorthand
+if (haveMoney) spendMoney();
+
+// ternary if
+const whatToDo = haveMoney ? spendMoney() : winLottery();
 
 // Summary
 const wallet = 5000;
@@ -66,12 +86,12 @@ const bmw = 86475;
 const ford = 40190;
 const dacia = 14995;
 
-function canAfford(amount) {
-  if (amount > wallet) {
-    return true;
-  }
-  return false;
-}
+// function canAfford(amount) {
+//   if (amount > wallet) {
+//     return true;
+//   }
+//   return false;
+// }
 
 const canAfford = (amount) => amount > wallet;
 
