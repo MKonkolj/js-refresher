@@ -86,16 +86,29 @@ const bmw = 86475;
 const ford = 40190;
 const dacia = 14995;
 
-// function canAfford(amount) {
-//   if (amount > wallet) {
-//     return true;
-//   }
-//   return false;
-// }
+function canAfford(amount) {
+  if (amount > wallet) {
+    return true;
+  }
+  return false;
+}
 
 const canAfford = (amount) => amount > wallet;
 
-const anoyingQuestions = canAfford(maybach)
+let mayCar;
+if (canAfford(maybach)) {
+  myCar2 = "👑";
+} else if (canAfford(bmw)) {
+  myCar2 = "😎";
+} else if (canAfford(ford)) {
+  myCar2 = "😀";
+} else if (canAfford(dacia)) {
+  myCar2 = "😊";
+} else {
+  myCar2 = null;
+}
+
+const myCar2 = canAfford(maybach)
   ? "👑"
   : canAfford(bmw)
   ? "😎"
@@ -103,4 +116,6 @@ const anoyingQuestions = canAfford(maybach)
   ? "😀"
   : canAfford(dacia)
   ? "😊"
-  : "🥲";
+  : null;
+
+const amIwalkingHome = myCar2 || "walking";
