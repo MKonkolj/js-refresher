@@ -9,7 +9,7 @@ function winLottery() {
 
 // Arrow Function
 const spendMoney = () => {
-  haveMoney = true;
+  haveMoney = false;
 };
 
 // Immediately Invoked Function Expression (IIFE)
