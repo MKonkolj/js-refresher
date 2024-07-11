@@ -38,6 +38,7 @@ const introduceYourself2 = (name, position, tool) => {
 
 // Truthy and Falsy Values
 // --------------------------------------------------------------
+// GPT said:
 // In JavaScript, the following values are considered falsy:
 
 // 1. **`false`**: The boolean value `false`.
